@@ -1,42 +1,85 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Add styles to your CSS file */
+.price-tags{
+  display: flex;
+  flex-wrap: wrap;
+  width: 474px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.price-tag{
+  width: 158px;
+  height: 127px;
+  margin-left: -3px;
+  flex: 0 0 26%;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.price-tag-svg {
+  position: relative;
+  display: inline-block; /* Display price tags in a row */
+  margin: 0; /* Margin between price tags */
+  max-width: 33%; /* Maximum 3 price tags in a row */
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.price-tag-image {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.product-details {
+  position: absolute;
+  top: 0;
+  color: #000000;
+}
+
+.product-name {
+  position: relative;
+  top: 2px;
+  left: 6px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000; /* Black color for the name */
+}
+
+.product-price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 60px;
+  width: 156px;
+  height: 60px;
+  font-size: 52px;
+  text-align: center;
+}
+
+.original-price {
+  position: relative;
+}
+
+.discounted-price {
+  width: 70px;
+  height: 18px;
+  position: absolute;
+  bottom: -15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #F03F46  
+}
+
+@media print {
+  .price-tags{
+    margin: 2px;
+    zoom: 137%;
   }
-  to {
-    transform: rotate(360deg);
+  @page {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    margin-left: 59px;
+    margin-right: 59px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
